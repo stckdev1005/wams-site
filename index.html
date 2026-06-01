@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WAM'S — Fast-Food Urbain</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  <!-- ===== NAV ===== -->
+  <nav id="navbar">
+    <div class="nav-logo">WAM'S<span>BOX</span></div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#promos">Promos</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+33177030597" class="btn-nav">📞 Commander</a>
+    <button class="burger-menu" id="burgerBtn">&#9776;</button>
+  </nav>
+ 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu">✕</button>
+    <ul>
+      <li><a href="#menu" onclick="closeMobileMenu()">Menu</a></li>
+      <li><a href="#promos" onclick="closeMobileMenu()">Promos</a></li>
+      <li><a href="#apropos" onclick="closeMobileMenu()">À propos</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+      <li><a href="tel:+33177030597" class="btn-mobile-order">📞 Commander</a></li>
+    </ul>
+  </div>
+ 
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tag">🔥 Ouvert tous les jours</p>
+      <h1>WAM'S<br/><span class="accent">Burger & Box</span></h1>
+      <p class="hero-sub">Burgers, tacos, bowl'z, wings, tenders et box généreuses à commander directement par téléphone.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Voir le menu</a>
+        <a href="tel:+33177030597" class="btn-secondary">
+          📞 Commander
+        </a>
+      </div>
+    </div>
+    <div class="hero-showcase" aria-hidden="true">
+      <div class="hero-food-orbit">
+        <img src="assets/hero-food-spin.png" alt="" />
+      </div>
+    </div>
+    <div class="hero-badge">
+      <span>BOX 6€</span>
+      <span>Tacos d&egrave;s 5&euro;</span>
+    </div>
+  </section>
+ 
+  <!-- ===== CATEGORIES ===== -->
+  <section id="menu">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Notre carte</p>
+        <h2>Le <span class="accent">Menu</span></h2>
+      </div>
+ 
+      <!-- Catégorie tabs -->
+      <div class="cat-tabs" id="catTabs">
+        <button class="cat-tab active" data-cat="burgers">🍔 Burgers</button>
+        <button class="cat-tab" data-cat="tacos">🌯 Tacos</button>
+        <button class="cat-tab" data-cat="bowls">🥗 Bowl'z</button>
+        <button class="cat-tab" data-cat="box">📦 Box</button>
+        <button class="cat-tab" data-cat="wings">🍗 Wings & Tenders</button>
+        <button class="cat-tab" data-cat="etudiant">🎓 Menus Étudiants</button>
+      </div>
+ 
+      <!-- Produits -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+ 
+  <!-- ===== PROMOS ===== -->
+  <section id="promos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">&Agrave; retenir</p>
+        <h2>Les <span class="accent">incontournables</span></h2>
+      </div>
+      <div class="promos-grid">
+        <div class="promo-card promo-1">
+          <div class="promo-badge">🎓 Étudiant</div>
+          <h3>Formule Étudiant</h3>
+          <p>Burger étudiant ou bowl'z étudiant<br/>à partir de 4,50€</p>
+          <div class="promo-price">dès <strong>4,50€</strong></div>
+          <a href="tel:+33177030597" class="btn-promo">Profiter de l'offre</a>
+        </div>
+        <div class="promo-card promo-2">
+          <div class="promo-badge">💑 Duo</div>
+          <h3>WAM'S Bowl'z</h3>
+          <p>Bowl'z gourmand avec viande, fromages et sauces au choix</p>
+          <div class="promo-price">à partir de <strong>5,50€</strong></div>
+          <a href="tel:+33177030597" class="btn-promo">Commander</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== RÉSEAUX SOCIAUX ===== -->
+  <section id="socials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Suivez-nous</p>
+        <h2>Sur les <span class="accent">Réseaux</span></h2>
+      </div>
+      <div class="socials-grid">
+        <a href="https://instagram.com/" target="_blank" class="social-card instagram">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>Instagram</span>
+          <small>@wams</small>
+        </a>
+        <a href="https://snapchat.com/" target="_blank" class="social-card snapchat">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.148-.015h-.105c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></svg>
+          <span>Snapchat</span>
+          <small>@wams</small>
+        </a>
+        <a href="https://tiktok.com/" target="_blank" class="social-card tiktok">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.78a4.85 4.85 0 01-1.01-.09z"/></svg>
+          <span>TikTok</span>
+          <small>@wams.officiel</small>
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== À PROPOS ===== -->
+  <section id="apropos">
+    <div class="container apropos-inner">
+      <div class="apropos-text">
+        <p class="section-tag">Notre histoire</p>
+        <h2>Né dans la <span class="accent">rue,<br/>fait avec passion</span></h2>
+        <p>WAM'S propose une street food généreuse autour des burgers, tacos, bowl'z, wings, tenders et box. Les recettes vont droit au goût, avec des portions qui calent vraiment.</p>
+        <p>Les essentiels du menu sont clairs : tacos dès 5€, bowl'z à 5,50€, box dès 6€ et menus étudiants accessibles.</p>
+        <div class="apropos-stats">
+          <div><strong>5&euro;</strong><span>Tacos 1 viande</span></div>
+          <div><strong>6&euro;</strong><span>Box dès</span></div>
+          <div><strong>5,50&euro;</strong><span>Bowl'z</span></div>
+        </div>
+      </div>
+      <div class="apropos-img">
+        <div class="img-placeholder">
+          <span>🍔</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Nous trouver</p>
+        <h2>Infos & <span class="accent">Contact</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Adresse</strong>
+              <p> 1 Rue des Sapins, 77210 Avon</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <div>
+              <strong>Horaires</strong>
+              <p>Lundi - Vendredi : 11h30 - 14h30 / 18h30 - 22h30</p>
+              <p>Samedi - Dimanche : 18h30 - 22h30</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Téléphone</strong>
+              <p><a href="tel:+33177030597">01 77 03 05 97</a></p>
+            </div>
+          </div>
+          <div class="contact-btns">
+            <a href="tel:+33177030597" class="btn-contact-tel">📞 Appeler</a>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d662.0754378223033!2d2.7344555343279864!3d48.41235093901755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5f54a43edbdd3%3A0x864b21d4b3d5439d!2sWam&#39;s!5e0!3m2!1sfr!2sfr!4v1779986655654!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            width="100%" height="320" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">WAM'S<span>BOX</span></div>
+        <p>Burgers, tacos, bowl'z et box généreuses.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/" target="_blank" title="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://snapchat.com/" target="_blank" title="Snapchat">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.148-.015h-.105c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></svg>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" title="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.78a4.85 4.85 0 01-1.01-.09z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#promos">Promotions</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33177030597">📞 01 77 03 05 97</a></li>
+          <li><a href="mailto:contact@wams.fr">contact@wams.fr</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#mentions">Mentions légales</a></li>
+          <li><a href="#cgv">CGV</a></li>
+          <li><a href="#confidentialite">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 WAM'S. Tous droits réservés.</p>
+    </div>
+  </footer>
+ 
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
