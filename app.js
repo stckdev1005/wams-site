@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.animationDelay = `${i * 40}ms`;
 
       card.innerHTML = `
-        <div class="product-img">${item.emoji}</div>
+        <div class="product-img"><img src="${item.image}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="product-body">
           <div class="product-name">${item.name}</div>
           <div class="product-desc">${item.desc}</div>
